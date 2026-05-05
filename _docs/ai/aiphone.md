@@ -1,5 +1,5 @@
 ---
-title: Phone
+title: ai Phone
 category: Contact Syncing
 order: 2
 ---
