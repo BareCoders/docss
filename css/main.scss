@@ -4,52 +4,52 @@ sitemap: false
 ---
 
 /* ============================================
-   护眼色系 · 暖灰柔光版（低蓝光，适合长时间阅读）
-   所有颜色值均已调校，复制即可使用
+   米兰色 · 护眼模式（暖柔+低饱和）
+   适合长时间阅读的文档/AI导航站
    ============================================ */
 
 $baseurl: "{{ site.baseurl }}";
 
-/* 全局背景色：页面最外层背景，暖米灰，低亮度，减少刺眼 */
-$body-background-color: #ece8e0;
+/* 全局背景色：米兰浅米色，温柔不反光 */
+$body-background-color: #faf7f0;
 
-/* 主要内容区域的最大宽度（单位px） */
+/* 主要内容区域的最大宽度 */
 $content-max-width: 800px;
 
-/* 正文文字颜色：深暖灰，避免纯黑带来的高对比疲劳 */
-$content-color: #3c3a35;
+/* 正文文字颜色：深灰褐，避免纯黑，对比舒适 */
+$content-color: #4a4238;
 
-/* 内容区背景色：暖象牙白，与全局背景形成温和层次，非纯白 */
-$content-background-color: #fefcf8;
+/* 内容区背景色：暖白带微米黄，比背景稍亮 */
+$content-background-color: #fffdf9;
 
-/* 品牌主色调：用于链接、按钮、导航激活指示等（柔和陶土棕，替代刺眼蓝色） */
-$brand-colour: #8f7e6b;
+/* 品牌主色调：柔和陶土粉（米兰色系点缀），替代刺眼蓝/灰 */
+$brand-colour: #c7b59b;
 
-/* 品牌主色调的浅色变体：混合了主色与内容背景色，10%主色比例 */
+/* 品牌主色调浅色变体（10%主色混合背景） */
 $brand-colour-light: mix($brand-colour, $content-background-color, 10%);
 
-/* 导航栏顶部背景色：直接沿用品牌主色调（保持统一） */
+/* 顶部导航栏背景：沿用主色（或稍深一点增加层次） */
 $nav-header-background-color: $brand-colour;
 
-/* 顶部导航栏的高度（单位px） */
+/* 顶部导航栏高度 */
 $nav-header-height: 60px;
 
-/* 侧边导航栏（或菜单栏）的背景色：浅暖灰，与全局背景协调，不突兀 */
-$nav-background-color: #dfd9cf;
+/* 侧边导航栏背景：比全局背景略深，区分层次 */
+$nav-background-color: #f0ebe0;
 
-/* 侧边导航栏的宽度（单位px） */
+/* 侧边导航栏宽度 */
 $nav-width: 300px;
 
-/* 标准间距单位（px），用于内边距、外边距等 */
+/* 标准间距 */
 $space: 20px;
 
-/* 移动端断点：屏幕宽度小于此值时切换为移动布局（单位px） */
+/* 移动端断点 */
 $mobile-break: 700px;
 
-/* 全宽布局断点：当浏览器宽度大于此值时，内容区可进一步扩展（单位px） */
+/* 全宽布局断点 */
 $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 
-/* 引入各模块样式（以下保留原主题导入，无需修改） */
+/* 以下保留原主题导入 */
 @import "mixins";
 @import "normalize";
 @import "pygments";
