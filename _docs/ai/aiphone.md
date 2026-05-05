@@ -1,6 +1,6 @@
 ---
 title: ai Phone
-category: Contact Syncing
+category: AI
 order: 2
 ---
 
