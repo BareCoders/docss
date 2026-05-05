@@ -1,6 +1,6 @@
 ---
 title: Images
-category: Media
+category: DN
 order: 1
 ---
 
