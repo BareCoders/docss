@@ -1,7 +1,7 @@
 ---
 title: BookMarks                     # 导航栏显示
 subtitle: 一些书签     # 页面中跟在主标题后面
-category: AI
+category: About
 order: 1
 ---
 
