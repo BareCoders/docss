@@ -1,6 +1,6 @@
 ---
 title: ai Facebook
-category: Contact Syncing
+category: AI
 order: 1
 ---
 
