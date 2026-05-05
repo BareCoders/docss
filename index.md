@@ -1,38 +1,57 @@
 ---
-title: Welcome
+title: 首页                 # 导航栏显示
+subtitle: 智能导航第一站    # 页面中跟在主标题后面
+layout: default
 ---
 
-This is the **Edition** template from [CloudCannon](http://cloudcannon.com/).
-**Edition** is perfect for documenting your product, application or service.
-It's populated with example content to give you some ideas.
+# 👋 欢迎来到智能导航第一站
 
-ChatApp is a fictional chat application for sending messages and media to others.
-Teams and friend groups would use ChatApp to stay up to date if it existed.
+> 精选全球好用 AI 工具 + 域名注册资源，帮你快速找到对的入口。
 
-> [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
+---
 
-### Getting Started
+## 🚀 从这里开始
 
-Getting a message sent is quick and easy with ChatApp:
+<div class="feature-grid" markdown="1">
 
-1. Sign up for an account
-2. Add your friends from their email addresses
-3. Type a message or send a photo
+### 🤖 AI 工具大全
+对话、绘图、编程、搜索……你的第一个智能助手导航。
+[👉 探索 AI 工具 →](/ai)
 
-> Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
+### 🌐 域名注册导航
+主流注册商、比价平台、WHOIS 查询，一站搞定。
+[👉 挑选域名 →](/dn)
 
-### Features
+</div>
 
-Explore more of ChatApp by reading about our features:
+---
 
-#### Media
+## 📌 热门推荐
 
-Send images, videos and other media to people. Sources include your computer, phone and Facebook.
+| 分类 | 推荐 | 一句话说明 |
+|------|------|-------------|
+| AI 对话 | ChatGPT / Claude / Gemini | 三大主力模型，日常够用 |
+| AI 搜索 | Perplexity AI | 带来源的答案引擎 |
+| 域名注册 | Cloudflare Registrar | 零加价，成本价续费 |
+| 域名比价 | TLD-List | 对比 900+ 后缀价格 |
 
-#### Contact Syncing
+---
 
-Sync your contact list with your phone and/or Facebook contacts. Never lose your contacts between devices again!
+## 🔍 本站能帮你什么？
 
-#### Devices
+- ✅ **告别收藏夹混乱**：把好用的工具和网站集中整理
+- ✅ **省下比价时间**：域名注册商价格透明对比
+- ✅ **跟上 AI 潮流**：只收录国际主流、稳定更新的服务
 
-ChatApp is available everywhere. Find out how to set it up on your all your devices.
+---
+
+## 📬 反馈 & 建议
+
+发现链接失效？有想推荐的工具？  
+欢迎通过 [关于页面](/about) 联系我们。
+
+---
+
+**✨ 你的每一次访问，都是我们更新的动力。**
+
+*—— 智能导航站 · 持续维护*
