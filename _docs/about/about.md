@@ -1,3 +1,4 @@
+---
 title: About                       # 导航栏显示
 subtitle: 关于本站   # 页面中跟在主标题后面
 category: about
