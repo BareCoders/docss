@@ -1,5 +1,7 @@
 # Edition [ LEGACY TEMPLATE NO LONGER MAINTAINED ]
 
+  - https://github.com/CloudCannon/edition-jekyll-template
+
 Product documentation template for Jekyll. Browse through a [live demo](https://long-pig.cloudvent.net/).
 Start documenting your product, application, service or website with this configurable theme.
 
