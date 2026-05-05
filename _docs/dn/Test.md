@@ -1,6 +1,6 @@
 ---
 title: Test
-subtitle	页面展位 | 即将上线
+subtitle: 页面展位 | 即将上线
 category: DN
 order: 2
 ---
