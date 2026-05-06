@@ -1,0 +1,46 @@
+---
+layout: null
+sitemap: false
+---
+
+$baseurl: "{{ site.baseurl }}";
+
+// 全局背景色（页面最外层背景）—— 深灰蓝黑，接近夜间模式或低调科技感
+$body-background-color: #2B2E31;
+
+$content-max-width: 800px;
+// 正文文字颜色 —— 接近黑色，高对比度
+$content-color: #222;
+// 内容区域背景色 —— 纯白，清晰易读
+$content-background-color: #fff;
+
+// 品牌主色（导航顶部、链接等高亮区域）—— 明亮的蓝色
+$brand-colour: #3583d6;
+// 品牌主色的浅色变体（混合10%白色）—— 用于更柔和的点缀
+$brand-colour-light: mix($brand-colour, $content-background-color, 10%);
+
+// 导航头部背景色 —— 沿用品牌主色
+$nav-header-background-color: $brand-colour;
+$nav-header-height: 60px;
+// 导航菜单背景色 —— 浅灰，与深色外背景形成对比
+$nav-background-color: #f5f5f5;
+$nav-width: 300px;
+
+$space: 20px;
+
+$mobile-break: 700px;
+$full-width-break: $nav-width + ($space * 4) + $content-max-width;
+
+@import "mixins";
+@import "normalize";
+@import "pygments";
+@import "typography";
+@import "code";
+@import "tables";
+@import "layout";
+
+
+//  #f8efe8; 米黄色背景color: #515151; //深灰色文字}  米黄色背景和深灰色文字组合，让人感觉温暖、柔和，有助于缓解眼睛疲劳。
+//  #e8f6f3; 淡蓝色背景color: #333; //黑色文字}   淡蓝色背景和黑色文字组合，看起来清新舒适，可以有效减轻眼睛的疲劳。
+//  #fffbf0; 浅黄色背景color: #333; //黑色文字}   浅黄色背景和黑色文字组合看起来舒适，不容易造成视觉疲劳。
+//  #f1f1f1; 浅灰色背景color: #222; //深色文字}  浅灰色背景和深色文字组合，清晰明了，易于看清页面的内容。
