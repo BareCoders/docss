@@ -485,17 +485,25 @@ img {
     display: block !important;
   }
 
-  // 为有子菜单的顶级链接添加箭头指示器和指针样式
+  // 为有子菜单的顶级链接添加精致小箭头（靠右对齐，适应不同文字长度）
   .nav-item.top-level.has-submenu > a {
-    position: relative;
+    display: flex;                // Flex 布局
+    justify-content: space-between;  // 文字靠左，箭头靠右
+    align-items: center;         // 垂直居中
     cursor: pointer;
+    padding-right: $space;       // 右侧留出空间，避免箭头贴边
 
     &::after {
-      content: '▼';
-      font-size: 11px;
-      margin-left: 8px;
-      display: inline-block;
-      transition: transform 0.2s ease;
+      content: '▾';              // 更精致的小箭头（也可用 '▽' 或 '⌄'）
+      font-size: 1.2rem;         // 适中大小
+      line-height: 1;
+      transition: transform 0.2s ease, opacity 0.2s;
+      opacity: 0.7;              // 半透明，更柔和
+      margin-left: auto;         // 推至最右
+    }
+
+    &:hover::after {
+      opacity: 1;                // 悬停时完全不透明
     }
   }
 
@@ -524,5 +532,16 @@ img {
     border-left-color: $brand-colour;
     color: $brand-colour;
     font-weight: 500;
+  }
+}
+
+// 移动端优化：减小箭头字体和右侧内边距
+@media (max-width: $mobile-break - 1px) {
+  .full-navigation .nav-item.top-level.has-submenu > a {
+    padding-right: $space / 2;
+
+    &::after {
+      font-size: 1rem;
+    }
   }
 }
