@@ -39,6 +39,50 @@ $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 @import "tables";
 @import "layout";
 
+/* ======================================================
+   移动端额外优化（确保二级菜单点击交互在小屏幕上流畅、不溢出）
+   说明：原有 _layout.scss 中的样式已包含响应式规则，
+         以下补充针对移动端触摸优化和防止滚动冲突。
+   ====================================================== */
+
+@media (max-width: $mobile-break - 1px) {
+  // 移动端菜单打开时禁止背景滚动（避免滚动穿透）
+  body.nav-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  // 确保二级菜单在移动端侧边栏内正确显示/隐藏
+  .full-navigation .nav-item.top-level > ul {
+    // 继承 _layout.scss 中的隐藏规则，但避免样式冲突
+    display: none;
+  }
+
+  .full-navigation .nav-item.top-level.open > ul {
+    display: block;
+  }
+
+  // 二级菜单项缩进调整，适应小屏幕
+  .full-navigation .nav-item.top-level ul li a {
+    padding-left: 20px;   // 减少左内边距，节省空间
+    font-size: 1.3rem;
+  }
+
+  // 箭头图标大小适当缩小
+  .full-navigation .nav-item.top-level.has-submenu > a::after {
+    font-size: 10px;
+    margin-left: 6px;
+  }
+}
+
+// 触摸设备优化（增加点击区域响应）
+@media (hover: none) and (pointer: coarse) {
+  .full-navigation .nav-item.top-level > a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 
 //  #f8efe8; 米黄色背景color: #515151; //深灰色文字}  米黄色背景和深灰色文字组合，让人感觉温暖、柔和，有助于缓解眼睛疲劳。
 //  #e8f6f3; 淡蓝色背景color: #333; //黑色文字}   淡蓝色背景和黑色文字组合，看起来清新舒适，可以有效减轻眼睛的疲劳。
