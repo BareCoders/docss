@@ -464,3 +464,65 @@ img {
 .cms-editor-active .editor-link {
 	display: block;
 }
+
+/* ======================================================
+   新增：二级菜单点击显示/隐藏交互样式（用于 full-navigation）
+   作用：默认隐藏二级菜单，点击顶级链接后展开/收起，并显示箭头指示
+   依赖：HTML 中需为有子菜单的顶级 li 添加 class="has-submenu"
+         为顶级链接添加 class="nav-link" 以便 JS 绑定
+   注意：覆盖原主题中可能导致二级菜单直接显示的规则
+   ====================================================== */
+
+// 仅对完整导航模式生效（nav.full-navigation）
+.full-navigation {
+  // 所有顶级菜单下的二级菜单默认隐藏
+  .nav-item.top-level > ul {
+    display: none !important;  // 覆盖可能存在的其他规则
+  }
+
+  // 当顶级项拥有 open 类时，显示其下的二级菜单
+  .nav-item.top-level.open > ul {
+    display: block !important;
+  }
+
+  // 为有子菜单的顶级链接添加箭头指示器和指针样式
+  .nav-item.top-level.has-submenu > a {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '▼';
+      font-size: 11px;
+      margin-left: 8px;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  // 菜单打开时，箭头向上旋转
+  .nav-item.top-level.has-submenu.open > a::after {
+    transform: rotate(180deg);
+  }
+
+  // 二级菜单项的额外样式（美化，与主题风格统一）
+  .nav-item.top-level ul li a {
+    padding: 8px 15px 8px 30px;  // 左缩进显示层级
+    font-size: 0.9em;
+    border-left: 2px solid transparent;
+
+    &:hover {
+      background-color: $nav-background-color;  // 使用主题背景色变量
+      border-left-color: $brand-colour;         // 使用主题品牌色
+      color: $brand-colour;
+      text-decoration: none;
+    }
+  }
+
+  // 当前激活的菜单高亮
+  .nav-item.top-level ul li.current a {
+    background-color: $nav-background-color;
+    border-left-color: $brand-colour;
+    color: $brand-colour;
+    font-weight: 500;
+  }
+}
