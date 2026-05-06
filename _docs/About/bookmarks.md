@@ -15,11 +15,11 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| Twitter (X) | `https://twitter.com` |
-| GitHub | `https://github.com` |
-| Reddit | `https://reddit.com` |
-| LinkedIn | `https://linkedin.com` |
-| YouTube | `https://youtube.com` |
+| Twitter (X) | [`https://twitter.com`](https://twitter.com){:target="_blank"} |
+| GitHub | [`https://github.com`](https://github.com){:target="_blank"} |
+| Reddit | [`https://reddit.com`](https://reddit.com){:target="_blank"} |
+| LinkedIn | [`https://linkedin.com`](https://linkedin.com){:target="_blank"} |
+| YouTube | [`https://youtube.com`](https://youtube.com){:target="_blank"} |
 
 ---
 
@@ -27,11 +27,11 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| ChatGPT | `https://chat.openai.com` |
-| Claude | `https://claude.ai` |
-| Gemini | `https://gemini.google.com` |
-| Perplexity AI | `https://perplexity.ai` |
-| Poe (聚合) | `https://poe.com` |
+| ChatGPT | [`https://chat.openai.com`](https://chat.openai.com){:target="_blank"} |
+| Claude | [`https://claude.ai`](https://claude.ai){:target="_blank"} |
+| Gemini | [`https://gemini.google.com`](https://gemini.google.com){:target="_blank"} |
+| Perplexity AI | [`https://perplexity.ai`](https://perplexity.ai){:target="_blank"} |
+| Poe (聚合) | [`https://poe.com`](https://poe.com){:target="_blank"} |
 
 ---
 
@@ -39,11 +39,11 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| Namecheap | `https://namecheap.com` |
-| Cloudflare Registrar | `https://cloudflare.com/products/registrar` |
-| Namesilo | `https://namesilo.com` |
-| Porkbun | `https://porkbun.com` |
-| Dynadot | `https://dynadot.com` |
+| Namecheap | [`https://namecheap.com`](https://namecheap.com){:target="_blank"} |
+| Cloudflare Registrar | [`https://cloudflare.com/products/registrar`](https://cloudflare.com/products/registrar){:target="_blank"} |
+| Namesilo | [`https://namesilo.com`](https://namesilo.com){:target="_blank"} |
+| Porkbun | [`https://porkbun.com`](https://porkbun.com){:target="_blank"} |
+| Dynadot | [`https://dynadot.com`](https://dynadot.com){:target="_blank"} |
 
 ---
 
@@ -51,10 +51,10 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| Sedo | `https://sedo.com` |
-| Afternic | `https://afternic.com` |
-| Dan.com | `https://dan.com` |
-| NamePros 市场 | `https://namepros.com` |
+| Sedo | [`https://sedo.com`](https://sedo.com){:target="_blank"} |
+| Afternic | [`https://afternic.com`](https://afternic.com){:target="_blank"} |
+| Dan.com | [`https://dan.com`](https://dan.com){:target="_blank"} |
+| NamePros 市场 | [`https://namepros.com`](https://namepros.com){:target="_blank"} |
 
 ---
 
@@ -62,9 +62,9 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| Whois.com | `https://whois.com` |
-| ICANN Lookup | `https://lookup.icann.org` |
-| DomainTools WhoIS | `https://whois.domaintools.com` |
+| Whois.com | [`https://whois.com`](https://whois.com){:target="_blank"} |
+| ICANN Lookup | [`https://lookup.icann.org`](https://lookup.icann.org){:target="_blank"} |
+| DomainTools WhoIS | [`https://whois.domaintools.com`](https://whois.domaintools.com){:target="_blank"} |
 
 ---
 
@@ -72,12 +72,12 @@ order: 1
 
 | 名称 | URL |
 |------|-----|
-| Vercel (前端托管) | `https://vercel.com` |
-| Netlify (静态托管) | `https://netlify.com` |
-| Cloudflare (DNS/CDN) | `https://cloudflare.com` |
-| Name.com DNS 工具 | `https://name.com` |
-| Canva (设计) | `https://canva.com` |
-| TinyPNG (图片压缩) | `https://tinypng.com` |
+| Vercel (前端托管) | [`https://vercel.com`](https://vercel.com){:target="_blank"} |
+| Netlify (静态托管) | [`https://netlify.com`](https://netlify.com){:target="_blank"} |
+| Cloudflare (DNS/CDN) | [`https://cloudflare.com`](https://cloudflare.com){:target="_blank"} |
+| Name.com DNS 工具 | [`https://name.com`](https://name.com){:target="_blank"} |
+| Canva (设计) | [`https://canva.com`](https://canva.com){:target="_blank"} |
+| TinyPNG (图片压缩) | [`https://tinypng.com`](https://tinypng.com){:target="_blank"} |
 
 ---
 
