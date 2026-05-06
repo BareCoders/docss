@@ -23,13 +23,8 @@
 			<script async src='https://www.google-analytics.com/analytics.js'></script>
 		{% endif %}
 
-		<!-- 
-			========== 新增样式：二级菜单点击显示/隐藏 ==========
-			注意：此处覆盖了原主题中二级菜单的默认显示行为，
-			如需调整样式，请修改以下 CSS 块。
-		-->
+		<!-- 全局链接下划线覆盖样式（可选，保持与原主题一致） -->
 		<style>
-			/* 覆盖所有链接的下划线样式（原有样式保留） */
 			a {
 				text-decoration: none;
 			}
@@ -41,59 +36,6 @@
 			}
 			table a:hover {
 				text-decoration: underline;
-			}
-
-			/* ===== 新增导航交互样式 ===== */
-			/* 二级菜单默认隐藏 */
-			.nav-item.top-level ul {
-				display: none;
-				list-style: none;
-				padding-left: 0;
-				margin: 0;
-				background-color: #f9f9fb;
-			}
-
-			/* 当顶级项包含 open 类时，显示其下的二级菜单 */
-			.nav-item.top-level.open ul {
-				display: block;
-			}
-
-			/* 为有子菜单的顶级链接添加箭头指示器 */
-			.nav-item.top-level.has-submenu > a {
-				position: relative;
-				cursor: pointer;
-			}
-			.nav-item.top-level.has-submenu > a::after {
-				content: '▼';
-				font-size: 11px;
-				margin-left: 8px;
-				display: inline-block;
-				transition: transform 0.2s ease;
-			}
-			/* 菜单打开时箭头向上旋转 */
-			.nav-item.top-level.has-submenu.open > a::after {
-				transform: rotate(180deg);
-			}
-
-			/* 二级菜单项样式（可选，提升视觉效果） */
-			.nav-item.top-level ul li a {
-				display: block;
-				padding: 8px 15px 8px 30px;
-				color: #586069;
-				font-size: 0.9em;
-				border-left: 2px solid transparent;
-			}
-			.nav-item.top-level ul li a:hover {
-				background-color: #eef2f5;
-				border-left-color: #0366d6;
-				color: #0366d6;
-				text-decoration: none;
-			}
-			.nav-item.top-level ul li.current a {
-				background-color: #eef2f5;
-				border-left-color: #0366d6;
-				color: #0366d6;
-				font-weight: 500;
 			}
 		</style>
 	</head>
@@ -124,10 +66,7 @@
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
-						<!-- 
-							为每个有子菜单的顶级项添加 has-submenu 类，并保留原有 current 类 
-							注意：原主题中每个 group 至少有一个子项，因此全部添加 has-submenu
-						-->
+						<!-- 为每个有子菜单的顶级项添加 has-submenu 类 -->
 						<li class="nav-item top-level has-submenu {% if group.name == page.category %}current{% endif %}">
 							{% assign items = group.items | sort: 'order' %}
 							<!-- 为顶级链接添加 nav-link 类，用于 JS 绑定点击事件 -->
@@ -171,27 +110,24 @@
 		</script>
 
 		<!-- 
-			========== 新增脚本：二级菜单点击显示/隐藏 ==========
+			========== 二级菜单点击显示/隐藏交互脚本 ==========
 			功能：点击带有 .has-submenu 的顶级链接，展开/收起二级菜单；
 			同时关闭其他已打开的菜单（互斥效果）。
+			注：二级菜单的样式由 _layout.scss 控制，此脚本仅负责类切换。
 		-->
 		<script>
 			(function() {
-				// 等待 DOM 加载完成
 				document.addEventListener('DOMContentLoaded', function() {
-					// 获取所有需要交互的顶级菜单项（有二级菜单的）
 					var submenuParents = document.querySelectorAll('.nav-item.top-level.has-submenu');
 					
 					submenuParents.forEach(function(parent) {
-						// 获取顶级链接（我们添加了 .nav-link 类）
 						var triggerLink = parent.querySelector('a.nav-link');
 						if (!triggerLink) return;
 						
 						triggerLink.addEventListener('click', function(event) {
-							// 阻止默认的链接跳转（因为点击期望展开菜单，而不是跳转）
-							event.preventDefault();
+							event.preventDefault();  // 阻止跳转，仅展开菜单
 							
-							// 可选：关闭其他已经打开的菜单（一次只展开一个）
+							// 关闭其他已经打开的菜单（一次只展开一个）
 							submenuParents.forEach(function(other) {
 								if (other !== parent && other.classList.contains('open')) {
 									other.classList.remove('open');
