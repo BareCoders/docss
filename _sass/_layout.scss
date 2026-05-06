@@ -545,3 +545,22 @@ img {
     }
   }
 }
+
+/* =====================================================
+   额外修复：书签页面表格黑色背景
+   说明：书签页面使用了 Markdown 表格，黑色背景可能来自表格单元格，
+         此规则强制清除表格及其单元格的背景。
+   ===================================================== */
+.content table,
+.content table tr,
+.content table td,
+.content table th {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+.content table td a,
+.content table tr a {
+  background-color: transparent !important;
+  background: none !important;
+}
